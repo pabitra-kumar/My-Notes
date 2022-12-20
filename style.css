@@ -118,7 +118,7 @@ body {
 	outline: none;
 	border-bottom-color: #6A679E;
 }
-input[type=button] {
+input[type=button], input[type=submit] {
   padding:5px 15px; 
   background:#ccc; 
   border:0 none;
@@ -150,6 +150,20 @@ input[type=button] {
 	border-color: #6A679E;
 	outline: none;
 }
+
+.authent-switch {
+	text-decoration: none;
+	font-weight: 700;
+	font-size: small;
+	color: #4C489D;
+	padding-bottom: 20px;
+}
+
+.authent-switch:hover {
+	color: red;
+}
+
+
 
 .button__icon {
 	font-size: 24px;

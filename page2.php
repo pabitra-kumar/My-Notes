@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,13 @@
     <title>success page</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-   <form >
-    <h1>Welcome!</h1>
-   </form> 
-</div>
+        <form>
+            <h1>Welcome to Your notes!</h1>
+        </form>
+    </div>
 </body>
+
 </html>
