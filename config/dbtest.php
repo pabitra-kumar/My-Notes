@@ -1,13 +1,11 @@
 <?php
 require("db.php");
 
-$username = "pabitra_kumar";
-$query = "INSERT INTO `pabitra_kumar` (`heading`, `content`, `date`) VALUES ('hello everyone,', 'This is my First Backend Software', current_timestamp());";
+$username = "om";
+$query = "CREATE TABLE `om` (`sl_no` INT(8) NOT NULL AUTO_INCREMENT , `heading` VARCHAR(100) NOT NULL , `content` TEXT NOT NULL , `date` DATE NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`sl_no`));";
 
-echo $query;
-$t = $con->query($query);
-require("dbget.php");
-echo print_r($posts);
+echo "$query <br>";
+
 if($con->query($query) == true)
 {
     echo "success";

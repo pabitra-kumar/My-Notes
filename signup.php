@@ -13,7 +13,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['name
     require("config/dbget.php");
     if ($posts == null) {
         $sql = "INSERT INTO `users` (`USERNAME`, `NAME`, `PASSWORD`, `date`) VALUES ('$username', '$name', '$password', current_timestamp());";
-        $sql1 = "create table $username(sl_no int(8) not null AUTO_INCREMENT, heading varchar(100) not null, content text not null, date date NOT NULL DEFAULT CURRENT_TIMESTAMP), PRIMARY KEY (sl_no)";
+        $sql1 = "CREATE TABLE $username(`sl_no` INT(8) NOT NULL AUTO_INCREMENT , `heading` VARCHAR(100) NOT NULL , `content` TEXT NOT NULL , `date` DATE NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`sl_no`));";
 
         if ($con->query($sql1) == true) {
             $insert = true;
