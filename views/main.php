@@ -181,7 +181,7 @@ $con->close();
                             <p class="card-text"> <?php echo "$post[content]"; ?> </p>
                             <input style="display: none;" type="number" name='sl_no' value='<?php echo "$post[sl_no]"; ?>'>
                             <!-- Button trigger modal -->
-                            <button type="submit" name='edit-submit' class="btn btn-success">Fetch for Edit</button>
+                            <button type="submit" name='edit-submit' href="#" class="btn btn-success">Fetch for Edit</button>
                             <a type="button" name='edit-submit' class="btn btn-success card-link edit-submit" data-bs-toggle="modal" data-bs-target="#exampleModal1"> Edit </a>
 
                             <!-- Modal -->
@@ -195,10 +195,10 @@ $con->close();
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="heading">
-                                                    <textarea name="heading" id="edit-heading" placeholder="Heading here"><?php foreach($post1 as $posts1) { echo "$posts1[heading]"; } ?></textarea>
+                                                    <textarea name="heading" id="edit-heading<?php echo "$post[sl_no]"; ?>" placeholder="Heading here"><?php foreach($post1 as $posts1) { echo "$posts1[heading]"; } ?></textarea>
                                                     <script>
                                                         ClassicEditor
-                                                            .create(document.querySelector('#edit-heading'))
+                                                            .create(document.querySelector('#edit-heading<?php echo "$post[sl_no]"; ?>'))
                                                             .catch(error => {
                                                                 console.error(error);
                                                             });
@@ -209,12 +209,12 @@ $con->close();
                                                     <h1 class="modal-title fs-5" id="exampleModalLabel">Content</h1>
                                                 </div>
                                                 <div class="content">
-                                                    <textarea name="content" id="edit-content" placeholder="put your notes here">
+                                                    <textarea name="content" id="edit-content<?php echo "$post[sl_no]"; ?>" placeholder="put your notes here">
                                                     <?php foreach ($post1 as $posts1) { echo "$posts1[content]"; } ?>
                                                     </textarea>
                                                     <script>
                                                         ClassicEditor
-                                                            .create(document.querySelector('#edit-content'))
+                                                            .create(document.querySelector('#edit-content<?php echo "$post[sl_no]"; ?>'))
                                                             .catch(error => {
                                                                 console.error(error);
                                                             });
