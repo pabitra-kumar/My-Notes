@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `my_notes`
 --
-
+CREATE DATABASE IF NOT EXISTS `my_notes` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `my_notes`;
 -- --------------------------------------------------------
 
 --
